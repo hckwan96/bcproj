@@ -84,3 +84,13 @@ input {
   display: flex;
   flex-direction: column;
 }
+
+.error{
+  color:red;
+  font-weight: bolder;
+}
+
+.done{
+  color:green;
+  font-weight: bolder;
+}
