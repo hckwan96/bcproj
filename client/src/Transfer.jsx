@@ -87,7 +87,7 @@ function Transfer({ address, setBalance, privateKey, nounce, setNounce })
       </label>
 
       <label>
-        Recipient
+        Recipient Public Key
         <input
           placeholder="Type an address"
           value={recipient}
@@ -118,11 +118,7 @@ function hashTransaction(transaction) {
 }
 
 async function signTransaction(transactionHash, privateKey) {
-  const signature = await secp.sign(transactionHash, privateKey);
-
-  return signature;
-
-  //return secp.sign(Uint8Array.from(transactionHash), Uint8Array.from(privateKey));
+  return await secp.sign(transactionHash, privateKey);
 }
 
 export default Transfer;
